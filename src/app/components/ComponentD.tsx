@@ -1,10 +1,9 @@
 'use client';
 
-import { useContext } from 'react';
-import { UserNameContext } from '../page';
+import { useUserNameContext } from '../context/UserNameContext';
 
 export default function ComponentD() {
-  const name = useContext(UserNameContext);
+  const [name] = useUserNameContext();
   return (
     <div className='border-4 border-solid border-blue-600 rounded-md p-10'>
       <h1>ComponentD</h1>
